@@ -1,0 +1,91 @@
+[debug] [2019-09-25T06:04:22.027Z] ----------------------------------------------------------------------
+[debug] [2019-09-25T06:04:22.029Z] Command:       /usr/bin/node /usr/bin/firebase serve --only hosting
+[debug] [2019-09-25T06:04:22.030Z] CLI Version:   7.3.2
+[debug] [2019-09-25T06:04:22.030Z] Platform:      linux
+[debug] [2019-09-25T06:04:22.030Z] Node Version:  v12.3.1
+[debug] [2019-09-25T06:04:22.030Z] Time:          Wed Sep 25 2019 09:04:22 GMT+0300 (East Africa Time)
+[debug] [2019-09-25T06:04:22.030Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-25T06:04:22.036Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-25T06:04:22.036Z] > authorizing via signed-in user
+[debug] [2019-09-25T06:04:22.036Z] [iam] checking project dsc-at-ttu for permissions ["firebase.projects.get"]
+[debug] [2019-09-25T06:04:22.038Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dsc-at-ttu:testIamPermissions  
+
+[debug] [2019-09-25T06:04:23.761Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-25T06:04:23.765Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/dsc-at-ttu  
+ 
+[debug] [2019-09-25T06:04:24.214Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-25T06:04:24.216Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/dsc-at-ttu/webApps/-/config  
+ 
+[debug] [2019-09-25T06:04:25.289Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-09-25T06:05:08.135Z] ----------------------------------------------------------------------
+[debug] [2019-09-25T06:05:08.137Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2019-09-25T06:05:08.137Z] CLI Version:   7.3.2
+[debug] [2019-09-25T06:05:08.137Z] Platform:      linux
+[debug] [2019-09-25T06:05:08.137Z] Node Version:  v12.3.1
+[debug] [2019-09-25T06:05:08.138Z] Time:          Wed Sep 25 2019 09:05:08 GMT+0300 (East Africa Time)
+[debug] [2019-09-25T06:05:08.138Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-25T06:05:08.144Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-25T06:05:08.144Z] > authorizing via signed-in user
+[debug] [2019-09-25T06:05:08.144Z] [iam] checking project dsc-at-ttu for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-09-25T06:05:08.146Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dsc-at-ttu:testIamPermissions  
+
+[debug] [2019-09-25T06:05:09.917Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-25T06:05:09.921Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/dsc-at-ttu  
+ 
+[debug] [2019-09-25T06:05:10.359Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'dsc-at-ttu'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-09-25T06:05:10.364Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dsc-at-ttu/versions  
+
+[debug] [2019-09-25T06:05:16.821Z] <<< HTTP RESPONSE 200
+[info] i  hosting[dsc-at-ttu]: beginning deploy...
+[info] i  hosting[dsc-at-ttu]: found 79 files in public
+[debug] [2019-09-25T06:05:16.885Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-09-25T06:05:17.063Z] [hosting] hash cache [cHVibGlj] stored for 79 files
+[debug] [2019-09-25T06:05:17.063Z] [hosting][hash queue][FINAL]
+[debug] [2019-09-25T06:05:17.063Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dsc-at-ttu/versions/e4ebdb895e2f082d:populateFiles  
+ <request body omitted>
+[debug] [2019-09-25T06:05:20.269Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-25T06:05:20.335Z] [hosting][populate queue][FINAL]
+[debug] [2019-09-25T06:05:20.335Z] [hosting] uploads queued: 78
+[debug] [2019-09-25T06:05:25.213Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[dsc-at-ttu]: file upload complete
+[debug] [2019-09-25T06:05:25.215Z] [hosting] deploy completed after 8392ms
+[debug] [2019-09-25T06:05:25.527Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "dsc-at-ttu"
+    },
+    "site": "dsc-at-ttu",
+    "version": "sites/dsc-at-ttu/versions/e4ebdb895e2f082d"
+  }
+]
+[info] i  hosting[dsc-at-ttu]: finalizing version...
+[debug] [2019-09-25T06:05:25.527Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/dsc-at-ttu/versions/e4ebdb895e2f082d?updateMask=status  
+
+[debug] [2019-09-25T06:05:27.310Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-25T06:05:27.310Z] [hosting] finalized version for dsc-at-ttu:
+[info] ✔  hosting[dsc-at-ttu]: version finalized
+[info] i  hosting[dsc-at-ttu]: releasing new version...
+[debug] [2019-09-25T06:05:27.311Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dsc-at-ttu/releases?version_name=sites/dsc-at-ttu/versions/e4ebdb895e2f082d  
+
+[debug] [2019-09-25T06:05:29.580Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-25T06:05:29.580Z] [hosting] release:
+[info] ✔  hosting[dsc-at-ttu]: release complete
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/dsc-at-ttu/overview
+[info] Hosting URL: https://dsc-at-ttu.firebaseapp.com

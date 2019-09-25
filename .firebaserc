@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "dscdevttu"
+    "default": "dscdevttu",
+    "dsc-ttu": "dsc-at-ttu"
   }
 }
